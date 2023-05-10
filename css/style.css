@@ -1,47 +1,93 @@
-* {
-    padding: 0;
-    margin: 0;
+*{
     box-sizing: border-box;
+    margin:0;
+    padding:0;
 }
 
-body {
-    background-color: lightblue;
+body{
+    background-color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+h1{
     text-align: center;
+    color:black;
+    font-size: 3rem;
 }
 
-.container{
+#square {
     width: 650px;
+    height: 650px;
+    margin: 30px auto;
+    background-color: black;
     display: flex;
     flex-wrap: wrap;
-    margin: 10px auto;
 }
 
-#play {
-    margin: 10px auto;
+.cell-100 {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.box {
+.cell-81 {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
     border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.box-facile {
-    width: 65px;
-    height: 65px;
+.cell-49 {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.box-medio {
-    width: calc(650px / 9);
-    height: calc(650px / 9);
+.cell-good{
+    background-color: rgb(12, 227, 12);
 }
 
-.box-difficile {
-    width: calc(650px / 7);
-    height: calc(650px / 7);
-}
-
-.red {
+.cell-dangerous{
     background-color: red;
+}
+
+.block-cell-red{
+    pointer-events: none;
+}
+
+.click-none{
+    pointer-events: none;
+}
+
+#result {
+    width: 500px;
+    background-color:black;
+    margin: 30px auto;
+}
+
+.game-over{
+    text-align: center;
+    display: none;
+}
+
+.game-over h2{
+    color: red;
+}
+
+.winner{
+   text-align: center;
+   display: none;
+}
+
+.winner h2{
+    color: green;
 }
